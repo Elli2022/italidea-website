@@ -45,48 +45,63 @@ const highlights = [
 
 export default function Home() {
   return (
-    <div className="bg-[#f8f4ee] text-neutral-900">
-      <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 pb-20 pt-8 md:px-10">
+    <div className="overflow-x-hidden bg-[#f8f4ee] text-neutral-900">
+      <main className="mx-auto box-border flex min-h-screen w-full min-w-0 max-w-6xl flex-col px-4 pb-20 pt-6 sm:px-6 sm:pt-8 md:px-10">
         <RevealSection
           as="header"
-          className="mb-14 flex flex-wrap items-center justify-between gap-4"
+          className="mb-10 flex flex-col gap-4 sm:mb-14 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between"
         >
-          <div className="space-y-3">
+          <div className="min-w-0 space-y-3">
             <p className="font-display text-3xl font-semibold tracking-tight text-[#183a2f] md:text-4xl">
               Italidea
             </p>
-            <p className="w-fit rounded-full border border-[#183a2f]/30 bg-white/80 px-4 py-2 text-sm font-medium tracking-wide text-[#8b1e1e] backdrop-blur-sm">
+            <p className="max-w-full rounded-full border border-[#183a2f]/30 bg-white/80 px-3 py-2 text-xs font-medium leading-snug tracking-wide text-[#8b1e1e] backdrop-blur-sm sm:inline-block sm:w-fit sm:px-4 sm:text-sm">
               Svensk-italiensk tolkning och språkstöd
             </p>
           </div>
-          <a href="#kontakt" className="btn-primary px-5 py-2 text-sm">
+          <a
+            href="#kontakt"
+            className="btn-primary w-full shrink-0 px-5 py-2.5 text-sm sm:w-auto"
+          >
             Kontakta oss
           </a>
         </RevealSection>
 
-        <RevealSection className="grid gap-10 md:grid-cols-[1.25fr_1fr]">
-          <div data-reveal>
-            <p className="mb-4 text-sm uppercase tracking-[0.18em] text-[#8b1e1e]">
+        <RevealSection className="grid min-w-0 gap-10 md:grid-cols-[1.25fr_1fr]">
+          <div data-reveal className="min-w-0">
+            <p className="mb-4 text-xs uppercase tracking-[0.14em] text-[#8b1e1e] sm:text-sm sm:tracking-[0.18em]">
               Benvenuti – välkommen
             </p>
-            <h1 className="font-display text-4xl font-semibold leading-tight text-[#183a2f] md:text-6xl md:leading-[1.05]">
+            <h1 className="font-display text-[1.85rem] font-semibold leading-[1.15] text-balance text-[#183a2f] sm:text-4xl md:text-6xl md:leading-[1.05]">
               Erfaren italiensk tolk med ett hjärta i både Sverige och Italien
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-neutral-700">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-700 sm:mt-6 sm:text-lg">
               Personlig och trygg hjälp för privatpersoner och företag som
               behöver språkstöd mellan Sverige och Italien.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#tjanster" className="btn-secondary px-5 py-2 text-sm">
+            <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href="#tjanster"
+                className="btn-secondary w-full px-5 py-2.5 text-sm sm:w-auto"
+              >
                 Se tjänster
               </a>
               <a
                 href="mailto:cecilia.skoldebrink@gmail.com"
-                className="btn-secondary px-5 py-2 text-sm"
+                className="btn-secondary w-full px-5 py-2.5 text-sm sm:hidden"
+              >
+                Skicka e-post
+              </a>
+              <a
+                href="mailto:cecilia.skoldebrink@gmail.com"
+                className="btn-secondary hidden px-5 py-2 text-sm sm:inline-flex"
               >
                 cecilia.skoldebrink@gmail.com
               </a>
-              <a href="tel:+46707273699" className="btn-secondary px-5 py-2 text-sm">
+              <a
+                href="tel:+46707273699"
+                className="btn-secondary w-full px-5 py-2.5 text-sm sm:w-auto"
+              >
                 070-727 36 99
               </a>
             </div>
@@ -94,7 +109,7 @@ export default function Home() {
 
           <div
             data-reveal
-            className="card-lift overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
+            className="card-lift min-w-0 w-full max-w-full overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
           >
             <div className="relative h-72 w-full">
               <Image
@@ -123,7 +138,7 @@ export default function Home() {
           </div>
         </RevealSection>
 
-        <RevealSection className="mt-12 grid gap-6 md:grid-cols-3">
+        <RevealSection className="mt-12 grid min-w-0 gap-6 md:grid-cols-3">
           {highlights.map((item) => (
             <article
               key={item.label}
@@ -136,7 +151,7 @@ export default function Home() {
           ))}
         </RevealSection>
 
-        <RevealSection id="tjanster" className="mt-24">
+        <RevealSection id="tjanster" className="mt-24 min-w-0">
           <div data-reveal>
             <h2 className="font-display text-3xl font-semibold text-[#183a2f]">
               Tjänster
@@ -164,12 +179,12 @@ export default function Home() {
           </div>
         </RevealSection>
 
-        <RevealSection className="mt-24 grid items-center gap-10 md:grid-cols-2">
+        <RevealSection className="mt-24 grid min-w-0 items-center gap-10 md:grid-cols-2">
           <div
             data-reveal
-            className="card-lift overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
+            className="card-lift min-w-0 w-full overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
           >
-            <div className="relative h-72 w-full">
+            <div className="relative h-72 w-full max-w-full">
               <Image
                 src="/images/florence.jpg"
                 alt="Giotto's Campanile och Florens katedral"
@@ -181,7 +196,7 @@ export default function Home() {
               Florens – staden där Cecilias resa med italienska tog fart.
             </div>
           </div>
-          <div data-reveal>
+          <div data-reveal className="min-w-0">
             <h2 className="font-display text-3xl font-semibold text-[#183a2f]">
               Om mig
             </h2>
@@ -202,8 +217,8 @@ export default function Home() {
           </div>
         </RevealSection>
 
-        <RevealSection className="mt-16 grid items-center gap-10 md:grid-cols-2">
-          <div data-reveal>
+        <RevealSection className="mt-16 grid min-w-0 items-center gap-10 md:grid-cols-2">
+          <div data-reveal className="min-w-0">
             <h2 className="font-display text-3xl font-semibold text-[#183a2f]">
               Erfarenhet i praktiken
             </h2>
@@ -215,9 +230,9 @@ export default function Home() {
           </div>
           <div
             data-reveal
-            className="card-lift overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
+            className="card-lift min-w-0 w-full overflow-hidden rounded-3xl border border-[#183a2f]/20 bg-white shadow-sm"
           >
-            <div className="relative h-64 w-full md:h-72">
+            <div className="relative h-64 w-full max-w-full md:h-72">
               <Image
                 src="/images/meeting.jpg"
                 alt="Tolkning i professionellt möte"
@@ -285,14 +300,23 @@ export default function Home() {
               Beskriv vad du behöver hjälp med så återkommer jag med förslag på
               upplägg och pris.
             </p>
-            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            <div className="mt-4 flex w-full min-w-0 flex-col gap-3 text-sm sm:flex-row sm:flex-wrap">
               <a
                 href="mailto:cecilia.skoldebrink@gmail.com"
-                className="btn-secondary px-4 py-2"
+                className="btn-secondary w-full px-4 py-2.5 sm:hidden"
+              >
+                Skicka e-post
+              </a>
+              <a
+                href="mailto:cecilia.skoldebrink@gmail.com"
+                className="btn-secondary hidden px-4 py-2 sm:inline-flex"
               >
                 cecilia.skoldebrink@gmail.com
               </a>
-              <a href="tel:+46707273699" className="btn-secondary px-4 py-2">
+              <a
+                href="tel:+46707273699"
+                className="btn-secondary w-full px-4 py-2.5 sm:w-auto"
+              >
                 070-727 36 99
               </a>
             </div>
@@ -354,14 +378,16 @@ export default function Home() {
           <div data-reveal>
           <p className="font-display text-lg text-[#183a2f]">Italidea</p>
           <p className="mt-2">Svensk-italiensk tolkning · Sverige &amp; Italien</p>
-          <p className="mt-4">
+          <p className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3">
             <a
               href="mailto:cecilia.skoldebrink@gmail.com"
-              className="underline decoration-[#183a2f]/25 underline-offset-2 hover:text-[#183a2f]"
+              className="max-w-full break-all underline decoration-[#183a2f]/25 underline-offset-2 hover:text-[#183a2f]"
             >
               cecilia.skoldebrink@gmail.com
             </a>
-            {" · "}
+            <span className="hidden text-neutral-400 sm:inline" aria-hidden>
+              ·
+            </span>
             <a
               href="tel:+46707273699"
               className="underline decoration-[#183a2f]/25 underline-offset-2 hover:text-[#183a2f]"

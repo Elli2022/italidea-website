@@ -19,11 +19,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--color-cream);
   color: var(--color-ink);
+  overflow-x: hidden;
   font-family: var(--font-source-sans), "Segoe UI", system-ui, sans-serif;
 }
 
@@ -53,10 +55,15 @@ body {
 }
 
 .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
   border-radius: 9999px;
   background: var(--color-forest);
   color: white;
   font-weight: 600;
+  text-align: center;
   transition:
     background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -70,6 +77,13 @@ body {
 }
 
 .btn-secondary {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
   border-radius: 9999px;
   border: 1px solid rgba(24, 58, 47, 0.3);
   background: white;

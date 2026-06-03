@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="sv"
       className={`${sourceSans.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col overflow-x-hidden">{children}</body>
     </html>
   );
 }

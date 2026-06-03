@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TackPage() {
   return (
-    <div className="min-h-screen bg-[#f8f4ee] px-6 py-10 text-neutral-900 md:px-10 md:py-14">
+    <div className="min-h-screen overflow-x-hidden bg-[#f8f4ee] px-4 py-10 text-neutral-900 sm:px-6 md:px-10 md:py-14">
       <main className="mx-auto max-w-3xl rounded-3xl border border-[#183a2f]/20 bg-white p-8 text-center shadow-sm md:p-12">
         <span className="inline-flex rounded-full bg-[#f2ebe2] px-4 py-1 text-sm font-medium text-[#183a2f]">
           Tack för din förfrågan
