@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Italidea Website
 
-## Getting Started
+Marketing website for **Italidea** — Swedish–Italian interpretation, mediation, and practical language support for private clients and businesses.
 
-First, run the development server:
+![Italidea homepage](./docs/screenshots/hero-desktop.png)
+
+## Live site
+
+- **Production:** [italidea.netlify.app](https://italidea.netlify.app/)
+
+## Topics
+
+`nextjs` · `react` · `typescript` · `tailwindcss` · `netlify` · `static-site` · `responsive-design` · `accessibility` · `language-services` · `contact-form`
+
+## Project overview
+
+A warm, Italian-inspired single-page site that helps visitors quickly understand Cecilia Skoldebrink’s services and start a contact request. Content is in Swedish; the visual language uses forest green, terracotta accents, and tricolore details.
+
+| Section | Purpose |
+| --- | --- |
+| Hero | Value proposition, portrait, quick contact |
+| Highlights | Experience summary cards |
+| Services | Interpretation, Italy guidance, written support |
+| About | Biography and Florence imagery |
+| Contact | FormSubmit inquiry form + thank-you page |
+
+![Full page — desktop](./docs/screenshots/full-page-desktop.png)
+
+## What this demonstrates
+
+- Client-ready marketing site with clear information hierarchy
+- Static Next.js export for fast Netlify hosting
+- Scroll reveals and subtle hover motion (with `prefers-reduced-motion` support)
+- Accessible contact flow with dedicated `/tack` confirmation page
+- Royalty-free imagery with source credits
+
+## Tech stack
+
+- Next.js 16 (App Router, static export)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- FormSubmit (contact form delivery)
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Output is written to `out/` for static hosting.
 
-To learn more about Next.js, take a look at the following resources:
+## Netlify deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Configured in [`netlify.toml`](./netlify.toml):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Publish directory | `out` |
+| Site name | `italidea` |
 
-## Deploy on Vercel
+## Contact endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Email: [cecilia.skoldebrink@gmail.com](mailto:cecilia.skoldebrink@gmail.com)
+- Phone: [070-727 36 99](tel:+46707273699)
+- Form success redirect: `/tack`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Screenshots
+
+| View | |
+| --- | --- |
+| Desktop hero | ![](./docs/screenshots/hero-desktop.png) |
+| Mobile hero | ![](./docs/screenshots/hero-mobile.png) |
+
+## Repository naming
+
+Canonical repo: **`italidea-website`**. The older name `Italidea` (capital I) is retired in favor of a conventional lowercase GitHub slug.
+
+## License
+
+Client project for Italidea / Cecilia Skoldebrink. Text and portrait assets belong to the client.

@@ -1,21 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Italidea | Svensk-italiensk tolkning och språkstöd",
+  title: "Italidea | Swedish–Italian interpretation and language support",
   description:
-    "Svensk-italiensk tolkning och språkstöd.",
+    "Professional Swedish–Italian interpretation, mediation, and practical guidance for private clients and businesses.",
+  openGraph: {
+    title: "Italidea — Swedish–Italian interpretation",
+    description:
+      "Experienced interpreter Cecilia Skoldebrink — language support between Sweden and Italy.",
+    locale: "sv_SE",
+    type: "website",
+    url: "https://italidea.netlify.app",
+  },
 };
 
 export default function RootLayout({
@@ -26,9 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="sv"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
