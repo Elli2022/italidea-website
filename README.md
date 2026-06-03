@@ -2,7 +2,9 @@
 
 Marketing website for **Italidea** — Swedish–Italian interpretation, mediation, and practical language support for private clients and businesses.
 
-![Italidea homepage](./docs/screenshots/hero-desktop.png)
+| Desktop (1440px) | Mobile (390px) |
+| --- | --- |
+| ![Hero — desktop](./docs/screenshots/hero-desktop.png) | ![Hero — mobile](./docs/screenshots/hero-mobile.png) |
 
 ## Live site
 
@@ -31,6 +33,7 @@ A warm, Italian-inspired single-page site that helps visitors quickly understand
 - Client-ready marketing site with clear information hierarchy
 - Static Next.js export for fast Netlify hosting
 - Scroll reveals and subtle hover motion (with `prefers-reduced-motion` support)
+- Mobile-first contact CTAs and overflow-safe layout on narrow viewports
 - Accessible contact flow with dedicated `/tack` confirmation page
 - Royalty-free imagery with source credits
 
@@ -77,10 +80,13 @@ Configured in [`netlify.toml`](./netlify.toml):
 
 ## Screenshots
 
-| View | |
+Captured from the current production build (June 2026) after the mobile overflow and responsive layout fixes.
+
+| View | Preview |
 | --- | --- |
 | Desktop hero | ![](./docs/screenshots/hero-desktop.png) |
-| Mobile hero | ![](./docs/screenshots/hero-mobile.png) |
+| Mobile hero (390×844) | ![](./docs/screenshots/hero-mobile.png) |
+| Full page (desktop) | ![](./docs/screenshots/full-page-desktop.png) |
 
 ## Repository naming
 
