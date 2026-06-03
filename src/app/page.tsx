@@ -75,36 +75,41 @@ export default function Home() {
             <h1 className="font-display text-[1.85rem] font-semibold leading-[1.15] text-balance text-[#183a2f] sm:text-4xl md:text-6xl md:leading-[1.05]">
               Erfaren italiensk tolk med ett hjärta i både Sverige och Italien
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-700 sm:mt-6 sm:text-lg">
+            <p className="mt-5 w-full max-w-2xl break-words text-base leading-relaxed text-neutral-700 sm:mt-6 sm:text-lg">
               Personlig och trygg hjälp för privatpersoner och företag som
               behöver språkstöd mellan Sverige och Italien.
             </p>
             <div className="mt-8 flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href="#kontakt"
+                className="btn-primary w-full px-5 py-2.5 text-sm sm:w-auto"
+              >
+                Kontakta mig
+              </a>
               <a
                 href="#tjanster"
                 className="btn-secondary w-full px-5 py-2.5 text-sm sm:w-auto"
               >
                 Se tjänster
               </a>
+            </div>
+            <p className="mt-4 text-sm text-neutral-600">
               <a
                 href="mailto:cecilia.skoldebrink@gmail.com"
-                className="btn-secondary w-full px-5 py-2.5 text-sm sm:hidden"
-              >
-                Skicka e-post
-              </a>
-              <a
-                href="mailto:cecilia.skoldebrink@gmail.com"
-                className="btn-secondary hidden px-5 py-2 text-sm sm:inline-flex"
+                className="break-all font-medium text-[#183a2f] underline decoration-[#183a2f]/30 underline-offset-2"
               >
                 cecilia.skoldebrink@gmail.com
               </a>
+              <span className="mx-2 text-neutral-400" aria-hidden>
+                ·
+              </span>
               <a
                 href="tel:+46707273699"
-                className="btn-secondary w-full px-5 py-2.5 text-sm sm:w-auto"
+                className="font-medium text-[#183a2f] underline decoration-[#183a2f]/30 underline-offset-2"
               >
                 070-727 36 99
               </a>
-            </div>
+            </p>
           </div>
 
           <div

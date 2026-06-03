@@ -2,9 +2,13 @@
 
 Marketing website for **Italidea** — Swedish–Italian interpretation, mediation, and practical language support for private clients and businesses.
 
-| Desktop (1440px) | Mobile (390px) |
-| --- | --- |
-| ![Hero — desktop](./docs/screenshots/hero-desktop.png) | ![Hero — mobile](./docs/screenshots/hero-mobile.png) |
+### Desktop (1440px)
+
+![Hero — desktop](./docs/screenshots/hero-desktop.png)
+
+### Mobile (390px)
+
+![Hero — mobile](./docs/screenshots/hero-mobile.png)
 
 ## Live site
 
